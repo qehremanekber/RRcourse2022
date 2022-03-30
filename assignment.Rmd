@@ -1,0 +1,16 @@
+---
+title: "assignment2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# The Good Place
+
+The Good Place is an American fantasy comedy television series created by *Michael Schur*. It premiered on NBC on September 19, 2016, and concluded on January 30, 2020, after four seasons and 53 episodes.
+
+
