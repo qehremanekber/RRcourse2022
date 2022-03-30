@@ -11,8 +11,35 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # The Good Place
 
-The Good Place is an American fantasy comedy television series created by *Michael Schur*. It premiered on NBC on September 19, 2016, and concluded on January 30, 2020, after four seasons and 53 episodes.
+1)The Good Place is an American fantasy comedy television series created by *Michael Schur*. It premiered on NBC on September 19, 2016, and concluded on January 30, 2020, after four seasons and 53 episodes.
 
-photo
+2)photo
 
 <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQePbj2dzP_1S9eIG68hqcJGs1TfPvoAMRz0Yk62bsSLPC9wd2-" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" alt="undefined" data-noaft="1" style="width: 383px; height: 574.663px; margin: 0px;">
+
+3) I have scraped table from wikipedia page about ratings
+
+```{r}
+library(readr)
+table_4 <- read_csv("table-4.csv")
+```
+
+```{r}
+summary(table_4)
+```
+```{r}
+str(table_4)
+```
+4)
+
+```{r}
+table_1 <- read_csv("table-1.csv")
+names(table_1) <- make.names(names(table_1))
+```
+
+```{r}
+library(ggplot2)
+ggplot(table_1, aes(Season, AVG.vievers)) + geom_point() + geom_jitter()
+```
+
+
