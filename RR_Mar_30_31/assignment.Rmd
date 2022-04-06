@@ -42,7 +42,7 @@ names(table_1) <- make.names(names(table_1))
 
 ```{r echo=FALSE}
 library(ggplot2)
-ggplot(table_1, aes(Season, AVG.vievers)) + geom_point() + geom_jitter()
+ggplot(table_1, aes(Season, AVG.vievers)) + geom_point() + geom_line()
 ```
 
 
