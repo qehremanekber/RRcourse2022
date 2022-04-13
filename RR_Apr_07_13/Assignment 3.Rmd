@@ -3,12 +3,32 @@ title: "Exercise 2"
 author: "Wojciech Hardy; Łukasz Nawaro"
 date: "3/29/2022"
 output: html_document
+params:
+  season:
+    label: "Seasons"
+    value: "1"
+    input: slider
+    min: 
+    max: 8
+    step: 1
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-load("../Data/season_1.RData")
+load(paste0("../Data/season_",params$season,".RData"))
 ```
+
+```{r}
+library(tidyverse)
+
+fils <- list.files("../Data", full.names = TRUE, all.files = TRUE, recursive = TRUE)
+
+list_seasons <- data.frame(fils)
+
+list_seasons$ID <- seq.int(nrow(list_seasons))
+
+```
+
 
 # Game of Thrones - Season 1 summary in numbers
 
@@ -38,6 +58,7 @@ You can see how the viewership of the episodes changed in Figure 1.
 
 ```{r viewers_plot}
 plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
+
 ```
 
 ***

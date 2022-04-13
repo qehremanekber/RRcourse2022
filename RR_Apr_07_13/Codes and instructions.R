@@ -2,7 +2,7 @@
 # Reproducible Research 2022
 # Wojciech Hardy & Lukasz Nawaro
 
-setwd("")
+
 
 # We need to load the necessary packages if we're operating through an R script.
 
@@ -20,10 +20,7 @@ render("RMD_class_1_cut.Rmd", clean = FALSE)   # tells knitr to keep the interme
 
 # See https://www.rdocumentation.org/packages/rmarkdown/versions/2.6/topics/render for more
 
-
 #################
-
-
 # Assignment 3
 # 
 # Open the Assignment 3.Rmd file (and the .html for reference). Take a look.
